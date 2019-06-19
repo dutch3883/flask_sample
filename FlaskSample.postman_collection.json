@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "6da6520f-23ae-4b81-a02b-e1a8c0d023ad",
+		"name": "FlaskSample",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get a user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/api/users/user1",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"users",
+						"user1"
+					]
+				},
+				"description": "for add user"
+			},
+			"response": []
+		},
+		{
+			"name": "Get users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/api/users",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"users"
+					]
+				},
+				"description": "for add user"
+			},
+			"response": []
+		},
+		{
+			"name": "Add user form",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "user3"
+						},
+						{
+							"key": "fname",
+							"value": "mesa"
+						},
+						{
+							"key": "lname",
+							"value": "dorares"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/api/users",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"users"
+					]
+				},
+				"description": "for add user"
+			},
+			"response": []
+		},
+		{
+			"name": "Add user json",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"user3\",\n\t\"fname\":\"mesa\",\n\t\"lname\":\"dorares\"\n}"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/api/users",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"users"
+					]
+				},
+				"description": "for add user"
+			},
+			"response": []
+		},
+		{
+			"name": "Add user json not complete param",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"user3\",\n\t\"fname\":\"mesa\"\n}"
+				},
+				"url": {
+					"raw": "localhost:18085/api/users/12312",
+					"host": [
+						"localhost"
+					],
+					"port": "18085",
+					"path": [
+						"api",
+						"users",
+						"12312"
+					]
+				},
+				"description": "for add user"
+			},
+			"response": []
+		}
+	]
+}
